@@ -19,7 +19,6 @@ function makeitems(){
 			,query: query
 			,title: title
 			,subtitle: subtitle
-			// ,content: content
 			,class: classarg
 		}
 		data.push(object);
@@ -96,6 +95,7 @@ function makeitems(){
 			,"The Hershey's Company"
 
 		);
+		//------------------------------------
 		add(
 			"oysters_th.jpg"
 			,"Data Visualization"
@@ -112,6 +112,7 @@ function makeitems(){
 			,"The American Museum of Natural History, NYC"
 
 		);
+		//------------------------------------
 		add(
 			"gpshapes_th.jpg"
 			,"Evolving Shapes"
@@ -128,6 +129,7 @@ function makeitems(){
 			,"Written from scratch"
 
 		);
+		//------------------------------------
 		add(
 			"developerstats_th.jpg"
 			,"Analytics dashboard"
@@ -136,16 +138,12 @@ function makeitems(){
 			,"Illumina BaseSpace app store"
 
 		);
-
-		
-
 	}
 
 
 	// create thumbnails
 	var items = 
 		d3.select(".workbody .content")
-		//.append("div").attr("class", "wrap")
 		.selectAll(".item")
 		.data(data)
 		;
@@ -155,11 +153,7 @@ function makeitems(){
 		.append("div").attr("class", "insideitem")
 		;
 	var links = insideitems
-		
-		//.append("a").attr("href", function(d){ return d.link; })
-		//.append("a").attr("href", function(d){ return "page.html?project=" + d.query; })
 		.append("a").attr("href", function(d){ return pagename+"?"+keyname+"="+d.query; })
-		
 		;
 	links
 		.append("div").attr("class", "thumbnail")
@@ -175,27 +169,14 @@ function makeitems(){
 	// align odd item
 	function isOdd(num) { return num % 2;}
 	if(isOdd(data.length)){
-		// create dummy item with no link
+		// create dummy item
 		var item = 
 			d3.select(".workbody .content")
 			.append("div").attr("class", "item small dummy")
 			;
-			/*
-		var insideitem = 
-			item.append("div").attr("class", "item small")
-			.append("div").attr("class", "insideitem hide")
-			;
-		insideitem
-			.append("div").attr("class", "thumbnail")
-			.append("img").attr("src", "images/rd_th.jpg") // arbitrary thumbnail image
-			;
-		insideitem
-			.append("div").attr("class", "blurb")
-			.append("div").attr("class", "container")
-			.text("...");
-			;
-			*/
 	}
+
+	
 
 }
 
