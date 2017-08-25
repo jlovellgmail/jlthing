@@ -1,0 +1,156 @@
+.pageBody {
+	/*background: rgba(0,0,0, .3);*/
+}
+.pageContent {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 40px;
+	position: relative;
+	padding: 40px;
+	padding-top: 80px;
+	max-width: 700px;
+	text-align: left;
+}
+.title {
+	font-size: 42px;
+	margin-bottom: 10px;
+}
+.subtitle {
+	font-size: 17px;
+	color: rgba(0,0,0, .6);
+	margin-bottom: 30px;
+	margin-top: 7px;
+	font-family: sans-serif;
+}
+.pageContent {
+	font-size: 14px;
+	color: rgba(0,0,0, .7);
+	font-family: sans-serif;
+}
+.pageContent img {
+	max-width: 100%;
+}
+.pageContent img {
+	margin-bottom: 20px;
+}
+.pageContent img:nth-child(n+2) {
+	margin-top: 30px;
+}
+.pageContent p {
+    line-height: 18px;
+}
+.pageContent .heading {
+	font-weight: bold;
+	/*font-size: 16px;*/
+	font-size: 20px;
+	margin-bottom: 0;
+	line-height: 25px;
+}
+.pageContent .spacer {
+	/*margin-top: 40px;*/
+	height: 40px;
+}
+.aspectratio {
+	position: relative;
+	width: 100%;	
+}
+.aspectratio.horses {
+	padding-bottom: 75%;
+}
+.aspectratio.hand {
+	padding-bottom: 119%;
+}
+.aspectratio iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+
+.goleft, .goright {
+	position: fixed;
+	width: 45px;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	display: table;
+	cursor: pointer;
+}
+.goleft {
+	left: 0;
+}
+.goright {
+	right: 0;
+}
+.goleft .cell, .goright .cell {
+	vertical-align: middle;
+	text-align: center;
+	padding: 8px;
+}
+
+/*
+.goleft .cell {
+	text-align: right;
+}
+.goright .cell {
+	text-align: left;
+}
+*/
+
+
+.goleft .cell:after {
+	/*content: url("images/arrow-left.png");*/
+}
+.goright .cell:after {
+	/*content: url("images/arrow-right.png");*/
+}
+.arrow {
+	width: 14px;
+	opacity: 0.4;
+}
+.rollover {
+	background: rgba(0,0,0, .07);
+}
+.itemContent iframe {
+	max-width: 100%;
+}
+.itemContent .caption {
+	margin-top: 0;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+	.goleft, .goright {
+		width: 35px;
+	}
+
+}
+@media screen and (max-width: 600px) {
+	.pageContent {
+		padding-top: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
