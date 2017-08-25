@@ -12,14 +12,13 @@ function scrollhandler(){
 }
 function makeitems(){
 	var data = [];
-	function add(image, blurb, query, title, subtitle, classarg){
+	function add(image, blurb, query, title, subtitle){
 		var object = {
 			image: image
 			,blurb: blurb
 			,query: query
 			,title: title
 			,subtitle: subtitle
-			,class: classarg
 		}
 		data.push(object);
 	}
@@ -176,7 +175,7 @@ function makeitems(){
 			;
 	}
 
-	
+
 
 }
 
