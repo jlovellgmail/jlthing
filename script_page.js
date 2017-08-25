@@ -391,8 +391,6 @@ function setBlowupViewKeys(){
 	$("body").off("keydown");
 	$("body").keydown(function(e) {
 		if(e.keyCode == 37) { // left
-
-
 			var list = $(".pageContent img")
 				.map(function() {
 					return this.src;
@@ -401,21 +399,14 @@ function setBlowupViewKeys(){
 			var i = list.findIndex(function(d){
 				return d == $(".blowupImage").attr("data-src");
 			});
-
-			//i = (i+1) % list.length;
 			i -= 1;
 			if(i < 0) i = list.length - 1;
-
 			$(".blowupImage")
 			.css("background-image", "url("+list[i]+")")
 				.attr("data-src", list[i])
 				;
-
-
 		}
 		else if(e.keyCode == 39) { // right
-
-
 			var list = $(".pageContent img")
 				.map(function() {
 					return this.src;
@@ -429,8 +420,6 @@ function setBlowupViewKeys(){
 			.css("background-image", "url("+list[i]+")")
 				.attr("data-src", list[i])
 				;
-
-
 		}
 		else if (e.keyCode == 27) { // escape
 		    exitBlowup();
