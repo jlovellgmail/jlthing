@@ -254,7 +254,6 @@ body {
 }
 .item.small {
 	width: 260px;
-	/*float: left;*/
 }
 .item.small.dummy {
 	visibility: hidden;

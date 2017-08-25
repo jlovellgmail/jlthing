@@ -2,6 +2,8 @@ cout = console.log;
 var $win = $(window)
 $(document).ready(readyhandler);
 $(document).scroll(scrollhandler);
+var pagename = "project.html";
+var keyname = "project";
 function readyhandler(){
 	makeitems();
 }
@@ -13,11 +15,11 @@ var contentlist = {};
 
 function makeitems(){
 	var data = [];
-	function add(image, blurb, link, title, subtitle, content){
+	function add(image, blurb, query, title, subtitle, content){
 		var object = {
 			image: image
 			,blurb: blurb
-			,link: link
+			,query: query
 			,title: title
 			,subtitle: subtitle
 			,content: content
@@ -210,22 +212,35 @@ function makeitems(){
 	make_items_list();
 	function make_items_list(){
 		//------------------------------------
+
+		/*
+		add(
+			"flowers_th.jpg"
+			,"TEST"
+			//,"https://www.behance.net/gallery/55239291/Drawing"
+			,"drawings"
+			,"TEST"
+			,""
+			,contentlist.drawings
+
+		);
+		*/
+
+
+		//------------------------------------
 		add(
 			"flowers_th.jpg"
 			,"Drawings"
-			//,"https://www.behance.net/gallery/55239291/Drawing"
-			,"drawings.html"
+			,"drawings"
 			,"Drawings"
 			,""
 			,contentlist.drawings
 
 		);
-
 		add(
 			"gp_th.jpg"
 			,"Experimental Rendering"
-			//,"https://www.behance.net/gallery/55239429/Experimental-rendering-software"
-			,"gp.html"
+			,"gp"
 			,"Experimental Digital Rendering"
 			,"Using simulations of evolution to draw pictures"
 			,contentlist.gp
@@ -235,8 +250,7 @@ function makeitems(){
 		add(
 			"ads_th.jpg"
 			,"Ad Campaign"
-			//,"https://www.behance.net/gallery/55195359/Ad-Campaign"
-			,"ads.html"
+			,"ads"
 			,"Ad Campaign"
 			,"Spec ads for Health Warrior"
 			,contentlist.ads
@@ -244,8 +258,7 @@ function makeitems(){
 		add(
 			"rd_th.jpg"
 			,"Key Art"
-			//,"https://www.behance.net/gallery/55239891/Drawing"
-			,"rd.html"
+			,"rd"
 			,"Key Art"
 			,"Film branding"
 			,contentlist.rd
@@ -255,8 +268,7 @@ function makeitems(){
 		add(
 			"icons_th.jpg"
 			,"App Icons"
-			//,"https://www.behance.net/gallery/55584281/App-icons"
-			,"icons.html"
+			,"icons"
 			,"App Icons"
 			,"Illumina BaseSpace"
 			,contentlist.icons
@@ -265,85 +277,34 @@ function makeitems(){
 		add(
 			"titleist_th.jpg"
 			,"Brochure"
-			//,"https://www.behance.net/gallery/55239511/Print-brochure-Titleist"
-			,"titleist.html"
+			,"titleist"
 			,"Print Brochure"
 			,"Titleist"
 			,contentlist.titleist
 
 		);
-		/*
-		add(
-			"torso_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239481/Drawing"
-			,"torso.html"
-			,"Drawing"
-			,""
-			,contentlist.torso
-		);
-		*/
 		//------------------------------------
 		add(
 			"bags_th.jpg"
 			,"Photography"
-			//,"https://www.behance.net/gallery/55467151/Retouching-Product-photography"
-			,"bags.html"
+			,"bags"
 			,"Product Photography and Retouching"
 			,"Leather handbags"
 			,contentlist.bags
 		);
-		/*
-		add(
-			"smith_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239543/Drawing-rendered-for-an-artist"
-			,"smith.html"
-			,"Drawing"
-			,"Rendering executed for an artist"
-			,contentlist.smith
-
-		);
-		*/
-		/*
-		add(
-			"resist_th.jpg"
-			,"Logo"
-			//,"https://www.behance.net/gallery/55459351/Logo"
-			,"resist.html"
-			,"Logo"
-			,"Apparel company"
-			,contentlist.resist
-
-		);
-		*/
 		add(
 			"hersheys_th.jpg"
 			,"Event Graphics"
-			//,"https://www.behance.net/gallery/55239589/Signage-for-an-event"
-			,"event.html"
+			,"event"
 			,"Event Graphics"
 			,""
 			,contentlist.event
 
 		);
-		/*
-		add(
-			"bentshape_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239743/Drawing"
-			,"bentshape.html"
-			,"Drawing"
-			,""
-			,contentlist.bentshape
-
-		);
-		*/
 		add(
 			"oysters_th.jpg"
 			,"Data Visualization"
-			//,"https://www.behance.net/gallery/55239711/Genomics-data-visualization-software"
-			,"oysters.html"
+			,"oysters"
 			,"Data Visualization"
 			,"Rhode Island School of Design / The University of Rhode Island"
 			,contentlist.oysters
@@ -352,8 +313,7 @@ function makeitems(){
 		add(
 			"fayum_th.jpg"
 			,"Scientific Illustration"
-			//,"https://www.behance.net/gallery/55240013/Scientific-Illustration-for-a-museum-publication"
-			,"fayum.html"
+			,"fayum"
 			,"Scientific Illustration"
 			,"The American Museum of Natural History, NYC"
 			,contentlist.fayum
@@ -362,30 +322,16 @@ function makeitems(){
 		add(
 			"gpshapes_th.jpg"
 			,"Evolving Shapes"
-			//,"https://www.behance.net/gallery/55239871/3D-forms-created-with-genetic-programs"
-			,"gpshapes.html"
+			,"gpshapes"
 			,"Evolving Shapes"
 			,"3D shapes generated with evolving code"
 			,contentlist.gpshapes
 
 		);
-		/*
-		add(
-			"fallingwater_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239823/Drawing-rendered-for-an-artist"
-			,"fallingwater.html"
-			,"Drawing"
-			,"Rendering executed for an artist"
-			,contentlist.fallingwater
-
-		);
-		*/
 		add(
 			"raytrace_th.jpg"
 			,"Raytracer"
-			//,"https://www.behance.net/gallery/55239777/3D-renderer-written-from-scratch"
-			,"raytrace.html"
+			,"raytrace"
 			,"Raytracer"
 			,"Written from scratch"
 			,contentlist.raytrace
@@ -394,52 +340,39 @@ function makeitems(){
 		add(
 			"developerstats_th.jpg"
 			,"Analytics Dashboard"
-			//,"https://www.behance.net/gallery/55239949/Web-app-store-metrics"
-			,"developerstats.html"
+			,"developerstats"
 			,"Analytics Dashboard UI"
 			,"Illumina BaseSpace app store"
 			,contentlist.developerstats
 
 		);
 
-		// remove for centering
-		/*
-		add(
-			"asymptote_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239891/Drawing"
-			,"drawing2.html"
-			,"Drawing"
-			,""
-			,contentlist.drawing2
-		
-		);
-		*/
-
-		/*
-		add(
-			"evolvingcode_th.jpg"
-			,"Evolving Code"
-			,"https://www.behance.net/gallery/55240077/Experiments-with-evolving-code"
-		);
-		add(
-			"np_th.jpg"
-			,"Network Programs"
-			,"https://www.behance.net/gallery/55240185/Genetic-programs-with-a-network-structure"
-		);
-		*/
-		
 
 	}
 
 
 	// get data from array based on page name
+	/*
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
+	*/
+	var queries = {};
+	$.each(document.location.search.substr(1).split('&'),function(c,q){
+	  var i = q.split('=');
+	  queries[i[0].toString()] = i[1].toString();
+	});
+	// console.log(queries);
+
+
 	var i = data.findIndex(function(d){
-		return d.link == page;
+		return d.query == queries.project;
 	});
 	var item = data[i];
+
+
+
+
+
 
 	cout("i: " + i);
 	console.dir("item: " + item);
@@ -480,28 +413,9 @@ function makeitems(){
 
 	$(".goleft").mouseover(function(){
 		$(this).addClass("rollover");
-
-		/*
-		// testing
-		var newindex = i - 1;
-		if(newindex < 0) newindex = data.length - 1;
-		else newindex %= data.length;
-		cout("newindex: " + newindex);
-		cout("link: " + data[newindex].link);
-		*/
-
 	});
 	$(".goright").mouseover(function(){
 		$(this).addClass("rollover");
-
-		/*
-		// testing
-		var newindex = (i+1) % data.length;
-		cout("newindex: " + newindex);
-		cout("link: " + data[newindex].link);
-		*/
-
-
 	});
 	$(".goleft, .goright").mouseout(function(){
 		$(this).removeClass("rollover");
@@ -509,15 +423,25 @@ function makeitems(){
 	$(".goleft").click(goleft);
 	$(".goright").click(goright);
 
+
 	function goleft(){
 		var newindex = i - 1;
 		if(newindex < 0) newindex = data.length - 1;
 		else newindex %= data.length;
-		window.location = data[newindex].link;
+		
+		//window.location = data[newindex].link;
+		//window.location = "page.html?project=" + data[newindex].query;
+		window.location = pagename+"?"+keyname+"="+data[newindex].query;
+
 	}
 	function goright(){
 		var newindex = (i+1) % data.length;
-		window.location = data[newindex].link;		
+		
+		//window.location = data[newindex].link;
+		//window.location = "page.html?project=" + data[newindex].query;
+		window.location = pagename+"?"+keyname+"="+data[newindex].query;
+
+
 	}
 
 	$("body").keydown(function(e) {

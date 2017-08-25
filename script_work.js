@@ -2,6 +2,8 @@ cout = console.log;
 var $win = $(window)
 $(document).ready(readyhandler);
 $(document).scroll(scrollhandler);
+var pagename = "project.html";
+var keyname = "project";
 function readyhandler(){
 	makeitems();
 }
@@ -10,11 +12,11 @@ function scrollhandler(){
 }
 function makeitems(){
 	var data = [];
-	function add(image, blurb, link, title, subtitle, classarg){
+	function add(image, blurb, query, title, subtitle, classarg){
 		var object = {
 			image: image
 			,blurb: blurb
-			,link: link
+			,query: query
 			,title: title
 			,subtitle: subtitle
 			// ,content: content
@@ -30,19 +32,15 @@ function makeitems(){
 		add(
 			"flowers_th.jpg"
 			,"Drawings"
-			//,"https://www.behance.net/gallery/55239291/Drawing"
-			,"drawings.html"
+			,"drawings"
 			,"Drawings"
 			,""
 
 		);
-
-
 		add(
 			"gp_th.jpg"
 			,"Experimental Rendering"
-			//,"https://www.behance.net/gallery/55239429/Experimental-rendering-software"
-			,"gp.html"
+			,"gp"
 			,"Experimental Rendering"
 			,"Using simulations of evolution to draw pictures"
 
@@ -51,8 +49,7 @@ function makeitems(){
 		add(
 			"ads_th.jpg"
 			,"Ad Campaign"
-			//,"https://www.behance.net/gallery/55195359/Ad-Campaign"
-			,"ads.html"
+			,"ads"
 			,"Ad Campaign"
 			,"Spec ads for Health Warrior"
 
@@ -60,8 +57,7 @@ function makeitems(){
 		add(
 			"rd_th.jpg"
 			,"Key Art"
-			//,"https://www.behance.net/gallery/55239891/Drawing"
-			,"rd.html"
+			,"rd"
 			,"Key Art"
 			,"Film branding"
 		
@@ -70,8 +66,7 @@ function makeitems(){
 		add(
 			"icons_th.jpg"
 			,"App Icons"
-			//,"https://www.behance.net/gallery/55584281/App-icons"
-			,"icons.html"
+			,"icons"
 			,"App Icons"
 			,"Illumina BaseSpace"
 
@@ -79,80 +74,32 @@ function makeitems(){
 		add(
 			"titleist_th.jpg"
 			,"Brochure"
-			//,"https://www.behance.net/gallery/55239511/Print-brochure-Titleist"
-			,"titleist.html"
+			,"titleist"
 			,"Print Brochure"
 			,"Titlelist"
 
 		);
-		/*
-		add(
-			"torso_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239481/Drawing"
-			,"torso.html"
-			,"Drawing"
-			,""
-
-		);
-		*/
 		//------------------------------------
 		add(
 			"bags_th.jpg"
 			,"Photography"
-			//,"https://www.behance.net/gallery/55467151/Retouching-Product-photography"
-			,"bags.html"
+			,"bags"
 			,"Product Photography and Retouching"
 			,"Leather Handbags"
 
 		);
-		/*
-		add(
-			"smith_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239543/Drawing-rendered-for-an-artist"
-			,"smith.html"
-			,"Drawing"
-			,"Rendering executed for an artist"
-
-		);
-		*/
-		/*
-		add(
-			"resist_th.jpg"
-			,"Logo"
-			//,"https://www.behance.net/gallery/55459351/Logo"
-			,"resist.html"
-			,"Logo"
-			,"Apparel company"
-
-		);
-		*/
 		add(
 			"hersheys_th.jpg"
 			,"Event Graphics"
-			//,"https://www.behance.net/gallery/55239589/Signage-for-an-event"
-			,"event.html"
+			,"event"
 			,"Event Graphics"
 			,"The Hershey's Company"
 
 		);
-		/*
-		add(
-			"bentshape_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239743/Drawing"
-			,"bentshape.html"
-			,"Drawing"
-			,""
-
-		);
-		*/
 		add(
 			"oysters_th.jpg"
 			,"Data Visualization"
-			//,"https://www.behance.net/gallery/55239711/Genomics-data-visualization-software"
-			,"oysters.html"
+			,"oysters"
 			,"Data Visualization"
 			,"Rhode Island School of Design / The University of Rhode Island"
 
@@ -160,8 +107,7 @@ function makeitems(){
 		add(
 			"fayum_th.jpg"
 			,"Scientific Illustration"
-			//,"https://www.behance.net/gallery/55240013/Scientific-Illustration-for-a-museum-publication"
-			,"fayum.html"
+			,"fayum"
 			,"Scientific Illustration"
 			,"The American Museum of Natural History, NYC"
 
@@ -169,28 +115,15 @@ function makeitems(){
 		add(
 			"gpshapes_th.jpg"
 			,"Evolving Shapes"
-			//,"https://www.behance.net/gallery/55239871/3D-forms-created-with-genetic-programs"
-			,"gpshapes.html"
+			,"gpshapes"
 			,"Evolving Shapes"
 			,"3D shapes generated with evolving code"
 
 		);
-		/*
-		add(
-			"fallingwater_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239823/Drawing-rendered-for-an-artist"
-			,"fallingwater.html"
-			,"Drawing"
-			,"Rendering executed for an artist"
-
-		);
-		*/
 		add(
 			"raytrace_th.jpg"
 			,"Raytracer"
-			//,"https://www.behance.net/gallery/55239777/3D-renderer-written-from-scratch"
-			,"raytrace.html"
+			,"raytrace"
 			,"Raytracer"
 			,"Written from scratch"
 
@@ -198,51 +131,12 @@ function makeitems(){
 		add(
 			"developerstats_th.jpg"
 			,"Analytics dashboard"
-			//,"https://www.behance.net/gallery/55239949/Web-app-store-metrics"
-			,"developerstats.html"
+			,"developerstats"
 			,"Analytics dashboard UI design"
 			,"Illumina BaseSpace app store"
 
 		);
 
-		// reomve for centering
-		/*
-		add(
-			"asymptote_th.jpg"
-			,"Drawing"
-			//,"https://www.behance.net/gallery/55239891/Drawing"
-			,"drawing2.html"
-			,"Drawing"
-			,""
-		
-		);
-		*/
-		// hidden item for centering
-		/*
-		add(
-			"rd_th.jpg"
-			,"hidden"
-			,""
-			,""
-			,""
-			,"hide"
-
-		);
-		*/
-
-
-		/*
-		add(
-			"evolvingcode_th.jpg"
-			,"Evolving Code"
-			,"https://www.behance.net/gallery/55240077/Experiments-with-evolving-code"
-		);
-		add(
-			"np_th.jpg"
-			,"Network Programs"
-			,"https://www.behance.net/gallery/55240185/Genetic-programs-with-a-network-structure"
-		);
-		*/
 		
 
 	}
@@ -261,7 +155,11 @@ function makeitems(){
 		.append("div").attr("class", "insideitem")
 		;
 	var links = insideitems
-		.append("a").attr("href", function(d){ return d.link; })
+		
+		//.append("a").attr("href", function(d){ return d.link; })
+		//.append("a").attr("href", function(d){ return "page.html?project=" + d.query; })
+		.append("a").attr("href", function(d){ return pagename+"?"+keyname+"="+d.query; })
+		
 		;
 	links
 		.append("div").attr("class", "thumbnail")
@@ -277,12 +175,27 @@ function makeitems(){
 	// align odd item
 	function isOdd(num) { return num % 2;}
 	if(isOdd(data.length)){
+		// create dummy item with no link
 		var item = 
 			d3.select(".workbody .content")
 			.append("div").attr("class", "item small dummy")
 			;
+			/*
+		var insideitem = 
+			item.append("div").attr("class", "item small")
+			.append("div").attr("class", "insideitem hide")
+			;
+		insideitem
+			.append("div").attr("class", "thumbnail")
+			.append("img").attr("src", "images/rd_th.jpg") // arbitrary thumbnail image
+			;
+		insideitem
+			.append("div").attr("class", "blurb")
+			.append("div").attr("class", "container")
+			.text("...");
+			;
+			*/
 	}
-
 
 }
 
