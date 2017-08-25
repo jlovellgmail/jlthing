@@ -160,7 +160,7 @@ function makeitems(){
 			+ spacer
 			+ text("Hershey's BlogHer Conference Suites", "heading")
 			+ text("Floor-to-ceiling environmental graphics.")
-			+ img("images/page_images/event_perspectivethreewalls.jpg")
+			+ img("images/page_images/event_perspectivethreewalls.png")
 			+ img("images/page_images/event_rightwall.jpg")
 			+ img("images/page_images/event_wallgraphic_door.jpg")
 			+ img("images/page_images/event_wall_beach.jpg")
