@@ -125,6 +125,37 @@
 
 
 
+.blowup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	/*
+    background-size: cover;
+	display: table;
+	width: 100%;
+	height: 100%;
+	opacity: .4;
+	*/
+	background: rgba(0,0,0, .8);
+
+}
+.blowupImage {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
 @media screen and (max-width: 800px) {
 	.goleft, .goright {
 		width: 35px;

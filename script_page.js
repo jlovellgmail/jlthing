@@ -4,17 +4,61 @@ $(document).ready(readyhandler);
 $(document).scroll(scrollhandler);
 var pagename = "project.html";
 var keyname = "project";
+var queries = {};
+var pi = undefined;
 function readyhandler(){
+
+	// get query string	
+	$.each(document.location.search.substr(1).split('&'),function(c,q){
+	  var i = q.split('=');
+	  queries[i[0].toString()] = i[1].toString();
+	});
+
+
 	makeitems();
+	
+	// get project index
+	//var i = getProjectIndex();
+	pi = getProjectIndex();
+	
+	setPageViewKeys();
+	populate();
 }
 function scrollhandler(){
 	// do nothing
 }
 
-var contentlist = {};
 
+
+
+// image blowup
+function blowup(s){
+	d3.select(".pageBody")
+		.append("div").attr("class", "blowup")
+		.append("div").attr("class", "blowupImage")
+		.style("background-image", "url("+s+")")
+		;
+	setBlowupViewKeys();
+	// click anywhere exits blowup
+	$(".blowup").click(exitBlowup);
+}
+function exitBlowup(){
+	d3.select(".blowup").remove();
+	setPageViewKeys();
+}
+
+
+
+
+
+
+
+
+
+var data = [];
+var contentlist = {};
 function makeitems(){
-	var data = [];
+	// var data = [];
 	function add(image, blurb, query, title, subtitle, content){
 		var object = {
 			image: image
@@ -31,7 +75,12 @@ function makeitems(){
 	make_content_list();
 	function make_content_list(){
 		function img(s){
-			return "<img src='"+s+"'>";
+			
+			//return "<img src='"+s+"'>";
+			//return  "<a href='"+s+"'><img src='"+s+"'></a>";
+			//return  "<img src='"+s+"' onclick='window.open(this.src)'>";
+			return  "<img src='"+s+"' onclick='blowup(this.src)'>";
+
 		}
 		function text(s, classes){
 			if(classes != undefined)
@@ -298,17 +347,70 @@ function makeitems(){
 		);
 	}
 
+}
 
-	// populate page based on query string
-	var queries = {};
-	$.each(document.location.search.substr(1).split('&'),function(c,q){
-	  var i = q.split('=');
-	  queries[i[0].toString()] = i[1].toString();
-	});
+
+
+
+
+// ...
+function getProjectIndex(){
 	var i = data.findIndex(function(d){
 		return d.query == queries.project;
 	});
-	var item = data[i];
+	return i;	
+}
+function goleft(){
+	var newindex = pi - 1;
+	if(newindex < 0) newindex = data.length - 1;
+	else newindex %= data.length;
+	window.location = pagename+"?"+keyname+"="+data[newindex].query;
+}
+function goright(){
+	var newindex = (pi+1) % data.length;
+	window.location = pagename+"?"+keyname+"="+data[newindex].query;
+}
+function setPageViewKeys(){
+	$("body").off("keydown");
+	$("body").keydown(function(e) {
+		if(e.keyCode == 37) { // left
+			goleft();
+		}
+		else if(e.keyCode == 39) { // right
+			goright();
+		}
+		else if (e.keyCode == 27) { // escape
+		    window.location = "work.html";
+		    // alert("esc in pageview");
+		}
+	});
+}
+function setBlowupViewKeys(){
+	$("body").off("keydown");
+	$("body").keydown(function(e) {
+		if(e.keyCode == 37) { // left
+			// do nothing
+		}
+		else if(e.keyCode == 39) { // right
+			// do nothing
+		}
+		else if (e.keyCode == 27) { // escape
+		    exitBlowup();
+			// alert("esc in blowup");
+		}
+	});
+}
+
+
+
+
+function populate() {
+
+	// populate page based on query string
+	
+	//var i = getProjectIndex();
+
+	var item = data[pi];
 	d3.select(".pageContent")
 		.append("div").attr("class", "title museo")
 		.text(item.title)
@@ -323,7 +425,7 @@ function makeitems(){
 		;
 
 
-	// previous next buttons
+	// previous, next, escape
 	d3.selectAll(".goleft .cell, .goright .cell")
 		.append("svg")
 		.attr("class", "arrow")
@@ -351,27 +453,6 @@ function makeitems(){
 	});
 	$(".goleft").click(goleft);
 	$(".goright").click(goright);
-	function goleft(){
-		var newindex = i - 1;
-		if(newindex < 0) newindex = data.length - 1;
-		else newindex %= data.length;
-		window.location = pagename+"?"+keyname+"="+data[newindex].query;
-	}
-	function goright(){
-		var newindex = (i+1) % data.length;
-		window.location = pagename+"?"+keyname+"="+data[newindex].query;
-	}
-	$("body").keydown(function(e) {
-		if(e.keyCode == 37) { // left
-			goleft();
-		}
-		else if(e.keyCode == 39) { // right
-			goright();
-		}
-		else if (e.keyCode == 27) { // escape
-		    window.location = "work.html";
-		}
-	});
 
 
 }
