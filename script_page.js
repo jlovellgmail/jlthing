@@ -28,6 +28,7 @@ function scrollhandler(){
 
 
 // blow up images
+var scrollPos = 0;
 function blowup(s){
 	d3.select(".pageBody")
 		.append("div").attr("class", "blowup")
@@ -38,10 +39,33 @@ function blowup(s){
 	setBlowupViewKeys();
 	// click anywhere exits blowup
 	$(".blowup").click(exitBlowup);
+	
+
+	//$(".pageBody").addClass("modal-open");
+	scrollPos = $('body').scrollTop();
+	$('body').css({
+	    overflow: 'hidden',
+	    position: 'fixed',
+	    top : -scrollPos,
+	    width: "100%"
+	});
+
+
 }
 function exitBlowup(){
 	d3.select(".blowup").remove();
 	setPageViewKeys();
+
+
+	// $(".pageBody").removeClass("modal-open");
+	$('body').css({
+	    overflow: '',
+	    position: '',
+	    top: '',
+	    width: ""
+	}).scrollTop(scrollPos);
+
+
 }
 
 
