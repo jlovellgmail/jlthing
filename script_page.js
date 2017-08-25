@@ -4,25 +4,21 @@ $(document).ready(readyhandler);
 $(document).scroll(scrollhandler);
 var pagename = "project.html";
 var keyname = "project";
-var queries = {};
 var pi = undefined;
 function readyhandler(){
 
-	// get query string	
-	$.each(document.location.search.substr(1).split('&'),function(c,q){
-	  var i = q.split('=');
-	  queries[i[0].toString()] = i[1].toString();
-	});
-
-
+	// make data list
 	makeitems();
 	
-	// get project index
-	//var i = getProjectIndex();
+	// get project index from query string
 	pi = getProjectIndex();
 	
+	// set keys
 	setPageViewKeys();
+
+	// build page layout
 	populate();
+
 }
 function scrollhandler(){
 	// do nothing
@@ -31,7 +27,7 @@ function scrollhandler(){
 
 
 
-// image blowup
+// blow up images
 function blowup(s){
 	d3.select(".pageBody")
 		.append("div").attr("class", "blowup")
@@ -46,9 +42,6 @@ function exitBlowup(){
 	d3.select(".blowup").remove();
 	setPageViewKeys();
 }
-
-
-
 
 
 
@@ -355,6 +348,15 @@ function makeitems(){
 
 // ...
 function getProjectIndex(){
+
+	// get query string
+	var queries = {};
+	$.each(document.location.search.substr(1).split('&'),function(c,q){
+	  var i = q.split('=');
+	  queries[i[0].toString()] = i[1].toString();
+	});
+
+	// get index of query string in data
 	var i = data.findIndex(function(d){
 		return d.query == queries.project;
 	});
@@ -381,7 +383,6 @@ function setPageViewKeys(){
 		}
 		else if (e.keyCode == 27) { // escape
 		    window.location = "work.html";
-		    // alert("esc in pageview");
 		}
 	});
 }
@@ -396,7 +397,6 @@ function setBlowupViewKeys(){
 		}
 		else if (e.keyCode == 27) { // escape
 		    exitBlowup();
-			// alert("esc in blowup");
 		}
 	});
 }
@@ -406,10 +406,8 @@ function setBlowupViewKeys(){
 
 function populate() {
 
-	// populate page based on query string
-	
-	//var i = getProjectIndex();
 
+	// populate page based on query string
 	var item = data[pi];
 	d3.select(".pageContent")
 		.append("div").attr("class", "title museo")
