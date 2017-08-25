@@ -19,11 +19,11 @@ function readyhandler(){
 	// build page layout
 	populate();
 
+
 }
 function scrollhandler(){
 	// do nothing
 }
-
 
 
 
@@ -32,6 +32,7 @@ function blowup(s){
 	d3.select(".pageBody")
 		.append("div").attr("class", "blowup")
 		.append("div").attr("class", "blowupImage")
+		.attr("data-src", s)
 		.style("background-image", "url("+s+")")
 		;
 	setBlowupViewKeys();
@@ -390,10 +391,46 @@ function setBlowupViewKeys(){
 	$("body").off("keydown");
 	$("body").keydown(function(e) {
 		if(e.keyCode == 37) { // left
-			// do nothing
+
+
+			var list = $(".pageContent img")
+				.map(function() {
+					return this.src;
+				})
+			.get();
+			var i = list.findIndex(function(d){
+				return d == $(".blowupImage").attr("data-src");
+			});
+
+			//i = (i+1) % list.length;
+			i -= 1;
+			if(i < 0) i = list.length - 1;
+
+			$(".blowupImage")
+			.css("background-image", "url("+list[i]+")")
+				.attr("data-src", list[i])
+				;
+
+
 		}
 		else if(e.keyCode == 39) { // right
-			// do nothing
+
+
+			var list = $(".pageContent img")
+				.map(function() {
+					return this.src;
+				})
+			.get();
+			var i = list.findIndex(function(d){
+				return d == $(".blowupImage").attr("data-src");
+			});
+			i = (i+1) % list.length;
+			$(".blowupImage")
+			.css("background-image", "url("+list[i]+")")
+				.attr("data-src", list[i])
+				;
+
+
 		}
 		else if (e.keyCode == 27) { // escape
 		    exitBlowup();
