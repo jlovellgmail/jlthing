@@ -39,9 +39,7 @@ function blowup(s){
 	setBlowupViewKeys();
 	// click anywhere exits blowup
 	$(".blowup").click(exitBlowup);
-	
-
-	//$(".pageBody").addClass("modal-open");
+	// stop scroll behind blowup
 	scrollPos = $('body').scrollTop();
 	$('body').css({
 	    overflow: 'hidden',
@@ -49,23 +47,17 @@ function blowup(s){
 	    top : -scrollPos,
 	    width: "100%"
 	});
-
-
 }
 function exitBlowup(){
 	d3.select(".blowup").remove();
 	setPageViewKeys();
-
-
-	// $(".pageBody").removeClass("modal-open");
+	// reenable scroll
 	$('body').css({
 	    overflow: '',
 	    position: '',
 	    top: '',
 	    width: ""
 	}).scrollTop(scrollPos);
-
-
 }
 
 
