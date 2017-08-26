@@ -136,7 +136,7 @@ function makeitems(){
 			+ caption("Charcoal on paper, 24.7 x 40 inches")
 			;
 		contentlist.gp = ""
-			+ '<div class="aspectratio horses"><iframe src="https://player.vimeo.com/video/104258367?autoplay=1&amp;loop=1&amp;autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
+			+ '<div class="aspectratio horses"><iframe src="https://player.vimeo.com/video/231226964?autoplay=1&amp;loop=1&amp;autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
 			+ img("images/page_images/gp_targethorse.jpg")
 			+ img("images/page_images/gp_horse.jpg")
 			// + spacer
