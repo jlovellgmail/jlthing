@@ -101,8 +101,9 @@ function makeitems(){
 		function caption(s){
 			return text(s, "caption");
 		}
-		function div(classes){
-			return "<div class='"+classes+"'></div>";
+		function div(classes, contents){
+			if(!contents) return "<div class='"+classes+"'></div>";
+			else return "<div class='"+classes+"'>"+contents+"</div>";
 		}
 		var spacer = div("spacer");
 		contentlist.icons = ""
