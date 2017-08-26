@@ -85,12 +85,7 @@ function makeitems(){
 	make_content_list();
 	function make_content_list(){
 		function img(s){
-			
-			//return "<img src='"+s+"'>";
-			//return  "<a href='"+s+"'><img src='"+s+"'></a>";
-			//return  "<img src='"+s+"' onclick='window.open(this.src)'>";
 			return  "<img src='"+s+"' onclick='blowup(this.src)'>";
-
 		}
 		function text(s, classes){
 			if(classes != undefined)
