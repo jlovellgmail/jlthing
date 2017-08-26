@@ -26,6 +26,11 @@
 	color: rgba(0,0,0, .7);
 	font-family: sans-serif;
 }
+.pageContent a,
+.pageContent a:hover,
+.pageContent a:visited {
+	color: rgba(0,0,0, .7);
+}
 .pageContent img {
 	max-width: 100%;
 }
@@ -103,6 +108,18 @@
 .itemContent .caption {
 	margin-top: 0;
 }
+.itemContent .caption.credit {
+	font-size: 10px;
+	font-style: italic;
+	color: rgba(0,0,0, .5);
+}
+.itemContent .caption.credit a,
+.itemContent .caption.credit a:hover,
+.itemContent .caption.credit a:visited {
+	color: rgba(0,0,0, .5);
+	text-decoration: underline;
+}
+
 
 
 
