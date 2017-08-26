@@ -162,10 +162,16 @@ function makeitems(){
 			+ img("images/page_images/ad_headlines.jpg")
 			;
 		contentlist.bags = ""
+			+ img("images/page_images/bags_SFclutch_1800.jpg")
+			+ img("images/page_images/bags_SF-Overnight---2017-01-27-18.31.41---thumbnail_repositioned_1800.jpg")
+			+ img("images/page_images/bags_SF-Satchel---2017-01-24-23.35.12---thumbnail_repositioned_1800.jpg")
+			+ img("images/page_images/bags_grid.jpg")
+			+ img("images/page_images/bags_SF-weekender_beforeafter_1800.jpg")
 			+ img("images/page_images/bags_drawstring.jpg")
-			+ img("images/page_images/bags_overnight.jpg")
-			+ img("images/page_images/bags_satchel.jpg")
-			+ img("images/page_images/bags_weekender.jpg")
+			+ caption("Products were transformed from one style to another in postproduction.")
+			+ img("images/page_images/bags_IMG_8892_1200.jpg")
+			+ img("images/page_images/bags_2016-12-08-13.04.20_rt2_50_q9_1200.jpg")
+			+ img("images/page_images/bags_2016-11-28-13.21.43---drawstring-top-edge_1200.jpg")
 			;
 		contentlist.event = ""
 			+ text("Hershey's Easter Event", "heading")
@@ -292,7 +298,7 @@ function makeitems(){
 		//------------------------------------
 		add(
 			"bags_th.jpg"
-			,"Photography"
+			,"Product Photography"
 			,"bags"
 			,"Product Photography and Retouching"
 			,"Leather handbags"

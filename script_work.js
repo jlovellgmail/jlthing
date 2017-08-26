@@ -80,7 +80,7 @@ function makeitems(){
 		//------------------------------------
 		add(
 			"bags_th.jpg"
-			,"Photography"
+			,"Product Photography"
 			,"bags"
 			,"Product Photography and Retouching"
 			,"Leather Handbags"
