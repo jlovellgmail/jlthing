@@ -217,7 +217,7 @@ function makeitems(){
 			+ img("images/page_images/fayum.jpg")
 			;
 		contentlist.gpshapes = ""
-			+ '<iframe src="https://player.vimeo.com/video/104474094?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+			+ '<div class="aspectratio gpshapes"><iframe src="https://player.vimeo.com/video/104474094?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
 			;
 		contentlist.raytrace = ""
 			+ img("images/page_images/raytrace.jpg")

@@ -57,6 +57,9 @@
 .aspectratio.hand {
 	padding-bottom: 119%;
 }
+.aspectratio.gpshapes {
+	padding-bottom: 59.9996880215889%;
+}
 .aspectratio iframe {
 	position: absolute;
 	width: 100%;
