@@ -45,9 +45,9 @@ function makeitems(){
 		);
 		//------------------------------------
 		add(
-			"ads_th.jpg"
+			"ad_th.jpg"
 			,"Ad Campaign"
-			,"ads"
+			,"ad"
 			,"Ad Campaign"
 			,"Spec ads for Health Warrior"
 

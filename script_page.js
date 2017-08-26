@@ -159,7 +159,8 @@ function makeitems(){
 			+ img("images/page_images/ad_theonly.jpg")
 			+ img("images/page_images/ad_onlysit.jpg")
 			+ img("images/page_images/ad_earlycomp1.jpg")
-			+ img("images/page_images/ad_headlines.jpg")
+			+ img("images/page_images/ad_headlines_1500.jpg")
+			+ caption("Exploring different line breaks")
 			;
 		contentlist.bags = ""
 			+ img("images/page_images/bags_SFclutch_1800.jpg")
@@ -257,9 +258,9 @@ function makeitems(){
 		);
 		//------------------------------------
 		add(
-			"ads_th.jpg"
+			"ad_th.jpg"
 			,"Ad Campaign"
-			,"ads"
+			,"ad"
 			,"Ad Campaign"
 			,"Spec ads for Health Warrior"
 			,contentlist.ads
