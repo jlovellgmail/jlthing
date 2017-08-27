@@ -61,9 +61,17 @@
 }
 .aspectratio.hand {
 	padding-bottom: 119%;
+	margin-top: 40px; /* fix separation with text above */
 }
 .aspectratio.gpshapes {
 	padding-bottom: 59.9996880215889%;
+	overflow: hidden;
+    margin-bottom: 10px; /* for caption */
+}
+.aspectratio.gpshapes iframe {
+	max-width: 100.5%;
+	width: 100.5%;
+    left: -1px;
 }
 .aspectratio iframe {
 	position: absolute;
@@ -71,6 +79,18 @@
 	height: 100%;
 	left: 0;
 	top: 0;
+}
+.movieOverlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0, .035);
+	pointer-events: none;
+}
+.darkenImage {
+	filter: brightness(.96);
 }
 
 

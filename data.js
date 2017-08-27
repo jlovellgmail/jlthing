@@ -24,9 +24,11 @@ function makedata(){
 			else return "<div class='"+classes+"'>"+contents+"</div>";
 		}
 		var spacer = div("spacer");
-		contentlist.icons = ""
-			+ img("images/page_images/icons.jpg")
-			+ text("App icons for BaseSpace, Illumina's genomics cloud-computing platform.")
+		contentlist.basespace = ""
+			+ '<img class="darkenImage" src="images/page_images/icons.jpg">'
+			+ caption("App icons")
+			+ img("images/page_images/developerstats.jpg")
+			+ caption("Analytics dashboard")
 			;
 		contentlist.titleist = ""
 			+ img("images/page_images/titleist.jpg")
@@ -42,11 +44,14 @@ function makedata(){
 			+ img("images/page_images/smith.jpg")
 			+ "<p class='caption'>Rendering executed for an artist.<br>Graphite on paper, 56 x 52.6 inches.</p>"
 			+ spacer
-			+ img("images/page_images/bentshape.jpg")
-			+ caption("Charcoal on paper")
-			+ spacer
 			+ img("images/page_images/fallingwater.jpg")
 			+ "<p class='caption'>Rendering executed for an artist.<br>Ballpoint pen on paper, 48.3 x 39.9 inches.</p>"
+			+ spacer
+			+ img("images/page_images/fayum.jpg")
+			+ caption("Scientific Illustration for a publication of The American Museum of Natural History, NYC")
+			+ spacer
+			+ img("images/page_images/bentshape.jpg")
+			+ caption("Charcoal on paper")
 			+ spacer
 			+ img("images/page_images/torso.jpg")
 			+ caption("Ink and graphite on paper")
@@ -55,14 +60,14 @@ function makedata(){
 			+ caption("Charcoal on paper, 24.7 x 40 inches")
 			;
 		contentlist.gp = ""
-			+ '<div class="aspectratio horses"><iframe src="https://player.vimeo.com/video/231226964?autoplay=1&amp;loop=1&amp;autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
+			+ '<div class="aspectratio horses"><iframe src="https://player.vimeo.com/video/231226964?autoplay=1&loop=1&autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
 			+ img("images/page_images/gp_targethorse.jpg")
 			+ img("images/page_images/gp_horse.jpg")
 			// + spacer
 			+ text("Stochastic process", "heading")
 			+ text("Say we have a photo we want to render called the \"target image\". Genetic computer programs seek to replicate this target image through self-generated experimentation. The program process begins by casting random lines across the digital canvas. Most lines don't come even close to the target, but those that come closest are retained by the program and those which don't are discarded. Now we have a new \"generation\" of information and, based on that information, the program refines its aim to more and more accurately reproduce the target image.")
 			+ text("Just as in nature, creating a rendering of a photograph with this process involves many generations where individuals, and in this case \"lines\", mate to see if they can create an improved offspring. Literally billions of organisms go extinct and only rarely does a beneficial mutation appear. But unlike nature, the computer can do this very quickly.")
-			+ '<div class="aspectratio hand"><iframe src="https://player.vimeo.com/video/169456761?autoplay=1&amp;loop=1&amp;autopause=0" width="640" height="760" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
+			+ '<div class="aspectratio hand"><iframe src="https://player.vimeo.com/video/169456761?autoplay=1&loop=1&autopause=0" width="640" height="760" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div class="movieOverlay"></div></div>'
 			+ img("images/page_images/gp_hand.jpg")
 			+ img("images/page_images/gp_woman.jpg")
 			+ img("images/page_images/gp_camera.jpg")
@@ -70,6 +75,12 @@ function makedata(){
 			//+ img("images/page_images/gp_1304121925.cumulative_best.21400.canvas.jpg")
 			+ img("images/page_images/gp_1211080-230.best.1009.fullscreen_crop_945.jpg")
 			+ img("images/page_images/gp_1211080-230.best.1009.fullscreen_target_945.jpg")
+
+			//+ '<div class="aspectratio gpshapes"><iframe src="https://player.vimeo.com/video/104474094?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div class="movieOverlay"></div></div>'
+			+ '<div class="aspectratio gpshapes"><iframe src="https://player.vimeo.com/video/104474094?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div class="movieOverlay"></div></div>'
+
+			+ caption("Deforming 3D objects with genetic programs")
+			+ spacer
 			;
 		contentlist.ads = ""
 			+ img("images/page_images/ad_set.jpg")
@@ -79,7 +90,7 @@ function makedata(){
 			+ img("images/page_images/ad_onlysit.jpg")
 			+ img("images/page_images/ad_earlycomp1.jpg")
 			+ img("images/page_images/ad_headlines_1500.jpg")
-			+ caption("Exploring different line breaks")
+			+ caption("Exploring line break variations")
 			;
 		contentlist.bags = ""
 			+ img("images/page_images/bags_SFclutch_1800.jpg")
@@ -114,37 +125,37 @@ function makedata(){
 			+ img("images/page_images/event_aramark.jpg")
 			;
 		contentlist.oysters = ""
-			+ img("images/page_images/oysters_2.jpg")
-			+ img("images/page_images/oysters_oysters - Screen shot 2012-09-10 at 3.53.03 AM.jpg")
-			+ text("Collaboration with researchers at the University of Rhode Island Department of Oceanography.")
 			+ text("The problem: ", "heading")
 			+ text("Oyster farming, a large industry in Rhode Island, has been damaged by an infectious disease that is drastically reducing populations. But one strain of oyster is immune. Scientists are working to discover what makes these oysters different.")
 			+ text("Challenges: ", "heading")
 			+ text("When we project data into a readable form, it can look very different depending on how we view it.  For example, one might wish to look at the interrelatedness of specific genes and/or the timing of when certain genes express themselves in the developing oyster. We have to choose a good visual and conceptual projection in order to see features in the data that matter to us.")
+			+ img("images/page_images/oysters_2.jpg")
+			+ img("images/page_images/oysters_oysters - Screen shot 2012-09-10 at 3.53.03 AM.jpg")
 			+ img("images/page_images/oysters_perspectives.jpg")
 			+ div("caption credit", 'Credit: Emok via <a href="https://commons.wikimedia.org/wiki/File%3AFirst_angle_projection.svg">Wikimedia Commons</a>')
 			+ spacer
 			+ text("Solution:", "heading")
 			+ text('Software that enabled the researchers to visualize genes as networks of "nodes and edges". The visualization allowed scientists to test their assumptions by "playing" with the networks, in order to reveal structure in the data. The software had to be flexible enough to accommodate yet-unknown forms of data, as the scientists continually restructured their material. As a major benefit, the programs have made it much easier to describe and share the progress of this research in educational settings, with colleagues, across disciplines, and in the scientific literature.')
-			+ img("images/page_images/oysters_slider.gif")
+			//+ img("images/page_images/oysters_slider.gif")
 			//+ '<iframe src="https://player.vimeo.com/video/170709062?autoplay=1&amp;loop=1&amp;autopause=0" width="640" height="88" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
 			+ img("images/page_images/oysters_4.jpg")
 			+ img("images/page_images/oysters1.jpg")
 			+ img("images/page_images/oysters2.jpg")
 			;
+			/*
 		contentlist.fayum = ""
 			+ img("images/page_images/fayum.jpg")
 			;
-		contentlist.gpshapes = ""
-			+ '<div class="aspectratio gpshapes"><iframe src="https://player.vimeo.com/video/104474094?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
-			;
+			*/
 		contentlist.raytrace = ""
 			+ img("images/page_images/raytrace.jpg")
 			+ text("Capabilities include rendering of spheres and polygons, antialiasing, recursive reflections, refraction within transparent objects, texture mapping, antialiasing, and depth of field blurring.")
 			;
+			/*
 		contentlist.developerstats = ""
 			+ img("images/page_images/developerstats.jpg")
 			;
+			*/
 		contentlist.rd = ""
 			+ img("images/page_images/keyart_rd_1600.jpg")
 			+ "<p class='caption'>Key art for the documentary <span style='font-style:italic;'>Racing Dreams</span></p>"
@@ -185,17 +196,15 @@ function makedata(){
 			,"Key Art"
 			,"Film branding"
 			,contentlist.rd
-		
 		);
 		//------------------------------------
 		add(
 			"titleist_th.jpg"
 			,"Brochure"
 			,"titleist"
-			,"Print Brochure"
+			,"Brochure"
 			,"Titleist"
 			,contentlist.titleist
-
 		);
 		add(
 			"hersheys_th.jpg"
@@ -204,7 +213,6 @@ function makedata(){
 			,"Event Graphics"
 			,""
 			,contentlist.event
-
 		);
 		//------------------------------------
 		add(
@@ -214,7 +222,6 @@ function makedata(){
 			,"Drawings"
 			,""
 			,contentlist.drawings
-
 		);
 		add(
 			"gp_th.jpg"
@@ -223,17 +230,15 @@ function makedata(){
 			,"Experimental Digital Rendering"
 			,"Using simulations of evolution to draw pictures"
 			,contentlist.gp
-
 		);
 		//------------------------------------
 		add(
 			"icons_th.jpg"
-			,"App Icons"
-			,"icons"
-			,"App Icons"
-			,"Illumina BaseSpace"
-			,contentlist.icons
-
+			,"Visual Design"
+			,"visualdesign"
+			,"Visual Design"
+			,"Illumina BaseSpace, a genomics cloud computing platform"
+			,contentlist.basespace
 		);
 		add(
 			"bags_th.jpg"
@@ -249,10 +254,10 @@ function makedata(){
 			,"Data Visualization"
 			,"oysters"
 			,"Data Visualization"
-			,"Rhode Island School of Design / The University of Rhode Island"
+			,"Collaboration with researchers at the University of Rhode Island Department of Oceanography"
 			,contentlist.oysters
-
 		);
+		/*
 		add(
 			"fayum_th.jpg"
 			,"Scientific Illustration"
@@ -260,18 +265,9 @@ function makedata(){
 			,"Scientific Illustration"
 			,"The American Museum of Natural History, NYC"
 			,contentlist.fayum
-
 		);
+		*/
 		//------------------------------------
-		add(
-			"gpshapes_th.jpg"
-			,"Evolving Shapes"
-			,"gpshapes"
-			,"Evolving Shapes"
-			,"3D shapes generated with evolving code"
-			,contentlist.gpshapes
-
-		);
 		add(
 			"raytrace_th.jpg"
 			,"Raytracer"
@@ -279,9 +275,8 @@ function makedata(){
 			,"Raytracer"
 			,"Written from scratch"
 			,contentlist.raytrace
-
 		);
-		//------------------------------------
+		/*
 		add(
 			"developerstats_th.jpg"
 			,"Analytics Dashboard"
@@ -289,8 +284,8 @@ function makedata(){
 			,"Analytics Dashboard UI"
 			,"Illumina BaseSpace app store"
 			,contentlist.developerstats
-
 		);
+		*/
 	}
 
 }
