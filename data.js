@@ -7,8 +7,9 @@ function makedata(){
 	var contentlist = {};
 	make_content_list();
 	function make_content_list(){
-		function img(s){
-			return  "<img src='"+s+"' onclick='blowup(this.src)'>";
+		function img(s, classes){
+			if(!classes) return  "<img src='"+s+"' onclick='blowup(this.src)'>";
+			else return "<img class='"+classes+"' src='"+s+"' onclick='blowup(this.src)'>";
 		}
 		function text(s, classes){
 			if(classes != undefined)
@@ -27,7 +28,7 @@ function makedata(){
 		var spacermedium = div("spacermedium");
 		var spacersmall = div("spacersmall");
 		contentlist.basespace = ""
-			+ '<img class="darkenImage" src="images/page_images/icons.jpg">'
+			+ img("images/page_images/icons.jpg", "darkenImage")
 			+ caption("App icons")
 			+ spacer
 			+ img("images/page_images/developerstats.jpg")
@@ -45,10 +46,10 @@ function makedata(){
 			+ caption("Colored pencil on paper")
 			+ spacer
 			+ img("images/page_images/smith.jpg")
-			+ "<p class='caption'>Rendering executed for an artist.<br>Graphite on paper, 56 x 52.6 inches.</p>"
+			+ "<p class='caption'>Rendering executed for an artist<br>Graphite on paper, 56 x 52.6 inches</p>"
 			+ spacer
 			+ img("images/page_images/fallingwater.jpg")
-			+ "<p class='caption'>Rendering executed for an artist.<br>Ballpoint pen on paper, 48.3 x 39.9 inches.</p>"
+			+ "<p class='caption'>Rendering executed for an artist<br>Ballpoint pen on paper, 48.3 x 39.9 inches</p>"
 			+ spacer
 			+ img("images/page_images/fayum.jpg")
 			+ caption("Scientific Illustration for a publication of The American Museum of Natural History, NYC")
@@ -64,7 +65,9 @@ function makedata(){
 			;
 		contentlist.gp = ""
 			+ '<div class="aspectratio horses"><iframe src="https://player.vimeo.com/video/231226964?autoplay=1&loop=1&autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
-			+ img("images/page_images/gp_targethorse.jpg")
+			+ spacer
+			+ '<img class="darkenImage" style="width:600px;" src="images/page_images/gp_targethorse.jpg" onclick="blowup(this.src)">'
+			+ spacer
 			+ img("images/page_images/gp_horse.jpg")
 			+ spacermedium
 			+ text("Stochastic process", "heading")
