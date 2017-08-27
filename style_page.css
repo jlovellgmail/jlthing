@@ -34,14 +34,9 @@
 .pageContent img {
 	max-width: 100%;
 }
-.pageContent img {
-	margin-bottom: 20px;
-}
-.pageContent img:nth-child(n+2) {
-	margin-top: 30px;
-}
 .pageContent p {
     line-height: 18px;
+    margin-bottom: 0;
 }
 .pageContent .heading {
 	font-weight: bold;
@@ -50,7 +45,13 @@
 	line-height: 25px;
 }
 .pageContent .spacer {
+	height: 54px;
+}
+.pageContent .spacermedium {
 	height: 40px;
+}
+.pageContent .spacersmall {
+	height: 20px;
 }
 .aspectratio {
 	position: relative;
@@ -61,12 +62,10 @@
 }
 .aspectratio.hand {
 	padding-bottom: 119%;
-	margin-top: 40px; /* fix separation with text above */
 }
 .aspectratio.gpshapes {
 	padding-bottom: 59.9996880215889%;
 	overflow: hidden;
-    margin-bottom: 10px; /* for caption */
 }
 .aspectratio.gpshapes iframe {
 	max-width: 100.5%;
@@ -126,7 +125,8 @@
 	max-width: 100%;
 }
 .itemContent .caption {
-	margin-top: 0;
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 .itemContent .caption.credit {
 	font-size: 10px;
