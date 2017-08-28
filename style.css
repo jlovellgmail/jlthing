@@ -1,3 +1,51 @@
+.bg1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(images/shirl112_v2_1500.jpg);
+	background-size: cover;
+	filter: saturate(.06) brightness(.5);
+	background-position-y: center;
+	background-position-x: center;
+	transform: scale(1.2);
+
+	transition: none;
+
+}
+.bg2 {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 200%;
+	height: 200%;
+	left: -50vw;
+	top: -50vh;
+	background: url(images/grid_25.png);
+	transform: rotate(13.23deg);
+	opacity: .2;
+}
+@media screen and (max-width: 800px) {
+	.bg1 {
+		background-position-x: 16%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.bg1 {
+		transform: scale(1);
+		top: 60px;
+		background-position-y: top;
+		height: 100%;
+
+		transition: .2s;
+
+	}
+}
+
+
 .video {
 	position: fixed;
 	left: 0;
@@ -32,7 +80,7 @@
 	text-align: center;
 }
 .contentHome .wrap {
-	margin-bottom: 19%;
+	margin-bottom: 24%;
 	font-family: sans-serif;
 	display: none;
 }
@@ -194,6 +242,9 @@ body {
 		width: 100%;
 		max-width: 100%;
 	}
+	.button {
+		margin-top: 20px;
+	}
 }
 .widthbar {
 	height: 4px;
@@ -249,10 +300,17 @@ body {
 }
 .insideitem {
 	vertical-align: top;
+	box-shadow: 0 0 3px 2px rgba(0,0,0, .1);
 }
+
+/*not used ?*/
+/*
 .insideitem.hide {
 	opacity: 0;
 }
+*/
+
+
 .item img {
 	width: 100%;
 }
@@ -261,7 +319,10 @@ body {
 	display: inline-block;
     font-size: 14px;
     color: rgba(0,0,0, .7);
-    background: rgba(0,0,0, 0.111);
+    
+    /*background: rgba(0,0,0, 0.111);*/
+    background: rgba(220,220,220, .97);
+
 }
 .blurb .container {
 	margin: 13px;
@@ -303,7 +364,12 @@ body {
 		font-size: 44px;
 	}
 	.workbody .content {
-		padding-bottom: 20px;
+
+		/*padding-bottom: 20px;*/
+
+		/* make background visible */
+	    padding-bottom: 100vh;
+
 	}
 }
 
