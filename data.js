@@ -89,7 +89,7 @@ function makedata(){
 			+ img("images/page_images/gp_1211080-230.best.1009.fullscreen_target_945.jpg")
 			+ spacer
 			+ '<div class="aspectratio gpshapes"><iframe src="https://player.vimeo.com/video/104474094?autoplay=1&loop=1&autopause=0&title=0&byline=0&portrait=0" width="640" height="384" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><div class="movieOverlay"></div></div>'
-			+ caption("Deforming 3D objects with genetic programs")
+			+ caption("Casting lines with genetic programs")
 			+ spacer
 			;
 		contentlist.ads = ""
