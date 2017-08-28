@@ -9,7 +9,11 @@ var data;
 getdata();
 function getdata(){
 	if(!window.data){
-		$.getScript('data.js', function()
+		
+		// for local testing
+		//$.getScript('data.js', function()
+		$.getScript('http://jlthing.com/data.js', function()
+
 		{
 		    // script is now loaded and executed.
 		    data = window.data;
