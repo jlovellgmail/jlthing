@@ -72,6 +72,12 @@
 	width: 100.5%;
     left: -1px;
 }
+.aspectratio.otl {
+	padding-bottom: 60.69078947368421%;
+}
+.aspectratio.piechart {
+	padding-bottom: 73.4375%;
+}
 .aspectratio iframe {
 	position: absolute;
 	width: 100%;
@@ -139,7 +145,9 @@
 	color: rgba(0,0,0, .5);
 	text-decoration: underline;
 }
-
+.itemContent .titleofwork {
+	font-style: italic;
+}
 
 
 

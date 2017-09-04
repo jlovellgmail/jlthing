@@ -27,12 +27,19 @@ function makedata(){
 		var spacer = div("spacer");
 		var spacermedium = div("spacermedium");
 		var spacersmall = div("spacersmall");
-		contentlist.basespace = ""
+		contentlist.webdesign = ""
+			+ '<div class="aspectratio otl"><iframe src="https://player.vimeo.com/video/231601293?autoplay=1&loop=1&autopause=0" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
+			+ div("caption", "Flash website for the film <span class='titleofwork'>Outside The Law</span>")
+			+ spacer
 			+ img("images/page_images/icons.jpg", "darkenImage")
-			+ caption("App icons")
+			+ caption("App icons, Illumina BaseSpace app store")
 			+ spacer
 			+ img("images/page_images/developerstats.jpg")
-			+ caption("Analytics dashboard")
+			+ caption("Analytics dashboard, Illumina BaseSpace")
+			+ spacer
+			+ '<div class="aspectratio piechart"><iframe src="https://player.vimeo.com/video/168895922?autoplay=1&loop=1&autopause=0" width="640" height="470" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
+			+ caption("Piechart animations, Illumina BaseSpace")
+
 			;
 		contentlist.titleist = ""
 			+ img("images/page_images/titleist.jpg")
@@ -179,9 +186,9 @@ function makedata(){
 			+ spacer
 			+ img("images/page_images/oysters2.jpg")
 			;
-		contentlist.raytrace = ""
+		contentlist.other = ""
 			+ img("images/page_images/raytrace.jpg")
-			+ text("Capabilities include rendering of spheres and polygons, antialiasing, recursive reflections, refraction within transparent objects, texture mapping, antialiasing, and depth of field blurring.")
+			+ caption("Raytracer written from scratch in C++. Capabilities include soft focus / depth of field blurring, recursive reflections, refraction within transparent objects, texture mapping and antialiasing with spheres and polygons.")
 			;
 		contentlist.rd = ""
 			+ img("images/page_images/keyart_rd_1600.jpg")
@@ -263,11 +270,14 @@ function makedata(){
 		//------------------------------------
 		add(
 			"icons_th.jpg"
-			,"Visual Design"
+			,"Web Design"
 			,"visualdesign"
-			,"Visual Design"
-			,"Illumina BaseSpace, a genomics cloud computing platform"
-			,contentlist.basespace
+			,"Web / Visual Design"
+			
+			//,"Illumina BaseSpace, a genomics cloud computing platform"
+			,""
+
+			,contentlist.webdesign
 		);
 		add(
 			"bags_th.jpg"
@@ -288,11 +298,11 @@ function makedata(){
 		);
 		add(
 			"raytrace_th.jpg"
-			,"Raytracer"
+			,"Other Projects"
 			,"raytrace"
-			,"Raytracer"
-			,"Written from scratch"
-			,contentlist.raytrace
+			,"Other Projects"
+			,""
+			,contentlist.other
 		);
 	}
 
