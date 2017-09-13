@@ -31,10 +31,13 @@ function makedata(){
 			+ '<div class="aspectratio otl"><iframe src="https://player.vimeo.com/video/231601293?autoplay=1&loop=1&autopause=0" width="640" height="382" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'
 			+ div("caption", "Flash website for the film <span class='titleofwork'>Outside The Law</span>")
 			+ spacer
+			+ img("images/page_images/web_landing-page_1800.jpg", "darkenImage dropshadow")
+			+ caption("Landing page, Virgil James")
+			+ spacer
 			+ img("images/page_images/icons.jpg", "darkenImage")
 			+ caption("App icons, Illumina BaseSpace app store")
 			+ spacer
-			+ img("images/page_images/developerstats.jpg")
+			+ img("images/page_images/developer-stats.jpg", "dropshadow")
 			+ caption("Analytics dashboard, Illumina BaseSpace")
 			+ spacer
 			+ '<div class="aspectratio piechart"><iframe src="https://player.vimeo.com/video/168895922?autoplay=1&loop=1&autopause=0" width="640" height="470" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>'

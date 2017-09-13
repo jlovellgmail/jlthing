@@ -1,5 +1,6 @@
 .DS_Store
 images/.DS_Store
-images/.DS_Store
-images/.DS_Store
-images/.DS_Store
+*.jpg
+*.jpeg
+*.gif
+*.png
