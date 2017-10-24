@@ -40,7 +40,7 @@
     margin-bottom: 0;
     
     /*letter-spacing: 0.02em;*/
-    
+
 }
 .pageContent .heading {
 	font-weight: bold;
@@ -176,6 +176,7 @@
 	right: 0;
 	bottom: 0;
 	background: rgba(0,0,0, .87);
+	z-index: 2;
 }
 .blowupImage {
 	position: fixed;
@@ -201,6 +202,37 @@
 	.pageContent {
 		padding-top: 30px;
 	}
+
+	.goleft, .goright {
+		width: auto;
+		height: auto;
+		/*background: rgba(255,255,255, 0.6);*/
+		z-index: 1;
+	}
+	.goleft .cell, .goright .cell {
+		padding: 0;
+		height: 50px;
+		font-size: 10px;
+		color: white;
+		display: inline-block;
+	}
+	.goleft .cell .textcontainer, .goright .cell .textcontainer {
+		display: inline-block;
+		text-align: right;
+		width: 100px;
+		vertical-align: top;
+		margin-top: 11px;
+		text-transform: uppercase;
+	}
+	.arrow {
+		opacity: 1;
+		fill: white;
+		display: inline-block;
+		padding: 0 7px;
+	}
+
+
+
 }
 
 

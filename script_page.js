@@ -94,16 +94,31 @@ function getProjectIndex(){
 	});
 	return i;	
 }
-function goleft(){
+function getpreviousindex(){
 	var newindex = pi - 1;
 	if(newindex < 0) newindex = data.length - 1;
 	else newindex %= data.length;
-	window.location = pagename+"?"+keyname+"="+data[newindex].query;
+	return newindex;	
+}
+function getnextindex(){
+	var newindex = (pi+1) % data.length;
+	return newindex;
+}
+function goleft(){
+	window.location = pagename+"?"+keyname+"="+data[getpreviousindex()].query;
 }
 function goright(){
-	var newindex = (pi+1) % data.length;
-	window.location = pagename+"?"+keyname+"="+data[newindex].query;
+	window.location = pagename+"?"+keyname+"="+data[getnextindex()].query;
 }
+function getpreviousblurb(){
+	return data[getpreviousindex()].blurb;
+}
+function getnextblurb(){
+	return data[getnextindex()].blurb;
+}
+
+
+
 function setPageViewKeys(){
 	$("body").off("keydown");
 	$("body").keydown(function(e) {
@@ -184,6 +199,22 @@ function populate() {
 
 
 	// previous, next, escape
+
+
+	/*
+	d3.select(".goleft .cell")
+		.append("div").attr("class", "textcontainer tk-aktiv-grotesk")
+		//.text("Product Photography")
+		.text(getpreviousblurb())
+		;
+	d3.select(".goright .cell")
+		.append("div").attr("class", "textcontainer tk-aktiv-grotesk")
+		//.text("Data Visualization")
+		.text(getnextblurb())
+		;
+	*/
+
+
 	d3.selectAll(".goleft .cell, .goright .cell")
 		.append("svg")
 		.attr("class", "arrow")
