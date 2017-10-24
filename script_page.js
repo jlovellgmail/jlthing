@@ -114,7 +114,10 @@ function setPageViewKeys(){
 			goright();
 		}
 		else if (e.keyCode == 27) { // escape
-		    window.location = "work.html";
+		    
+		    // window.location = "index.html";
+		    window.location = "/";
+		    
 		}
 	});
 }
@@ -208,6 +211,28 @@ function populate() {
 	});
 	$(".goleft").click(goleft);
 	$(".goright").click(goright);
+
+
+
+
+
+	// create menu
+	var wrap = d3.select(".menu")
+		.append("div").attr("class", "wrap")
+		;
+	wrap
+		.append("div").attr("class", "name tk-aktiv-grotesk")
+		.append("a").attr("href", "/")
+		.text("Jack Lovell")
+		;
+		/*
+	wrap
+		.append("div").attr("class", "tag tk-aktiv-grotesk")
+		.text("Graphic Designer")
+		;
+		*/
+
+
 
 
 }
