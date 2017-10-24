@@ -255,15 +255,12 @@ function populate() {
 
 	$(".goleft .arrowcontainer").mouseover(function(){
 		$(this).addClass("rollover");
-		// $(this).find(".cell").addClass("rollover")
 	});
 	$(".goright .arrowcontainer").mouseover(function(){
 		$(this).addClass("rollover");
-		// $(this).find(".arrowcontainer").addClass("rollover")
 	});
 	$(".goleft .arrowcontainer, .goright .arrowcontainer").mouseout(function(){
 		$(this).removeClass("rollover");
-		// $(this).find(".arrowcontainer").removeClass("rollover")
 	});
 	$(".goleft").click(goleft);
 	$(".goright").click(goright);

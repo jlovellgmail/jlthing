@@ -172,10 +172,6 @@
 }
 
 
-.goright.rollover, .goleft.rollover {
-	/*background: red;*/
-	/*background: none;*/
-}
 .arrowcontainer.rollover {
 	background: rgba(0,0,0, .07);
 }
@@ -304,13 +300,8 @@
 	.goleft .cell, .goright .cell {
 		padding: 0;
 	}
-	/*.goleft .cell .arrowcontainer .text, .goright .cell .arrowcontainer .text {*/
-	.arrowcontainer .text, .arrowcontainer .text {
-		color: white;
-	}
-
-
 	.arrowcontainer .text {
+		color: white;
 		display: inline-block;
 	}
 	.goright .text {
