@@ -253,14 +253,17 @@ function populate() {
 
 
 
-	$(".goleft").mouseover(function(){
+	$(".goleft .arrowcontainer").mouseover(function(){
 		$(this).addClass("rollover");
+		// $(this).find(".cell").addClass("rollover")
 	});
-	$(".goright").mouseover(function(){
+	$(".goright .arrowcontainer").mouseover(function(){
 		$(this).addClass("rollover");
+		// $(this).find(".arrowcontainer").addClass("rollover")
 	});
-	$(".goleft, .goright").mouseout(function(){
+	$(".goleft .arrowcontainer, .goright .arrowcontainer").mouseout(function(){
 		$(this).removeClass("rollover");
+		// $(this).find(".arrowcontainer").removeClass("rollover")
 	});
 	$(".goleft").click(goleft);
 	$(".goright").click(goright);

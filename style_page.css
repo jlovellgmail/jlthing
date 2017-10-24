@@ -138,13 +138,49 @@
 	padding: 8px;
 	display: table-cell;
 }
+/*.goleft .cell .arrowcontainer .text, .goright .cell .arrowcontainer .text {*/
+.arrowcontainer .text {
+	display: inline-block;
+	vertical-align: middle;
+	color: black;
+	text-transform: uppercase;
+	line-height: 9px;
+	letter-spacing: .06em;
+	font-size: 9px;
+}
+
+
+
+.arrowcontainer .text {
+	display: none;
+}
+.goleft .arrow img {
+	transform: rotate(180deg);
+}
 .arrow {
+
+	/*
 	width: 14px;
 	opacity: 0.4;
+	*/
+
 }
-.rollover {
+.arrow img {
+	filter: invert(100%);
+	width: 100%;
+	content: url(images/arrow_white.png);
+}
+
+
+.goright.rollover, .goleft.rollover {
+	/*background: red;*/
+	/*background: none;*/
+}
+.arrowcontainer.rollover {
 	background: rgba(0,0,0, .07);
 }
+
+
 .itemContent iframe {
 	max-width: 100%;
 }
@@ -193,11 +229,60 @@
 
 
 
+@media screen and (min-width: 1100px){
+	.goleft, .goright {
+		width: auto;
+	}
+	.goright .cell {
+		padding-right: 0;
+	}
+	.goleft .cell {
+		padding-left: 0;
+	}
+	.arrowcontainer {
+		position: relative;
+		height: 103px;
+		vertical-align: middle;
+		display: table-cell;
+	}
+	.goright .arrowcontainer {
+		padding-left: 25px;
+	}
+	.goleft .arrowcontainer {
+		padding-right: 25px;
+	}
+
+	.arrowcontainer .text {
+		display: inline-block;
+	}
+	.goright .text {
+		text-align: right;
+		margin-right: 36px;
+	}
+	.goleft .text {
+		text-align: left;
+		margin-left: 36px;
+	}
+	.arrow {
+		position: absolute;
+		top: 25px;
+	}
+	.goright .arrow {
+		right: 6px;
+	}
+	.goleft .arrow {
+		left: 6px;
+	}
+	.arrowcontainer .arrow img {
+		width: 28px;
+	}
+}
+
+
 @media screen and (max-width: 800px) {
 	.goleft, .goright {
 		width: 35px;
 	}
-
 }
 @media screen and (max-width: 600px) {
 	.pageContent {
@@ -219,14 +304,14 @@
 	.goleft .cell, .goright .cell {
 		padding: 0;
 	}
-	.goleft .cell .arrowcontainer .text, .goright .cell .arrowcontainer .text {
-		display: inline-block;
-		vertical-align: middle;
+	/*.goleft .cell .arrowcontainer .text, .goright .cell .arrowcontainer .text {*/
+	.arrowcontainer .text, .arrowcontainer .text {
 		color: white;
-		text-transform: uppercase;
-		line-height: 9px;
-		letter-spacing: .06em;
-		font-size: 9px;
+	}
+
+
+	.arrowcontainer .text {
+		display: inline-block;
 	}
 	.goright .text {
 		text-align: right;
@@ -247,15 +332,15 @@
 	}
 	.arrow img {
 		height: 100%;
+		filter: none;
+		width: initial;
+		content: url(images/arrow_white_fill.png);
 	}
 	.goright .arrow {
 		right: -9px;
 	}
 	.goleft .arrow {
 		left: -9px;
-	}
-	.goleft .arrow img {
-		transform: rotate(180deg);
 	}
 
 
