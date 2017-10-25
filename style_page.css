@@ -147,6 +147,11 @@
 	line-height: 9px;
 	letter-spacing: .06em;
 	font-size: 9px;
+
+
+	margin-bottom: 1px;
+
+
 }
 
 
@@ -209,7 +214,7 @@
 	right: 0;
 	bottom: 0;
 	background: rgba(0,0,0, .87);
-	z-index: 2;
+	/*z-index: 2;*/
 }
 .blowupImage {
 	position: fixed;
@@ -250,6 +255,12 @@
 
 	.arrowcontainer .text {
 		display: inline-block;
+
+
+		-webkit-font-smoothing: antialiased;
+	    font-weight: 700;
+
+
 	}
 	.goright .text {
 		text-align: right;
@@ -294,7 +305,7 @@
 	.goleft, .goright {
 		width: auto;
 		height: auto;
-		z-index: 1;
+		/*z-index: 1;*/
 		height: 50px;
 	}
 	.goleft .cell, .goright .cell {
@@ -303,6 +314,12 @@
 	.arrowcontainer .text {
 		color: white;
 		display: inline-block;
+
+
+		-webkit-font-smoothing: antialiased;
+	    font-weight: 700;
+
+
 	}
 	.goright .text {
 		text-align: right;
@@ -333,6 +350,15 @@
 	.goleft .arrow {
 		left: -9px;
 	}
+
+
+	/* stop flicker in menu arrows */
+	.menu {
+	    opacity: 0;
+	    transition: .1s;
+	    transition-timing-function: ease-out;
+	}
+
 
 
 

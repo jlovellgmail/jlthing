@@ -267,6 +267,13 @@ function populate() {
 
 
 
+	/* stop flicker in menu arrows */
+	var imageloader = new Image();
+	imageloader.onload = function () {
+	   $(".menu").css("opacity", "1");
+	}
+	imageloader.src = "images/arrow_white_fill.png";
+
 
 
 	// create menu
