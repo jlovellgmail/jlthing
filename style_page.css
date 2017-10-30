@@ -450,6 +450,26 @@
 }
 
 
+/* for ads 2x2 grid css build */
+.adtable {
+	display: table;
+}
+.adtablerow {
+	display: table-row;
+}
+.adtablecell {
+	display: table-cell;
+}
+.adtablerow .adtablecell:nth-of-type(1) {
+	padding-right: 16px;
+}
+.adtablerow .adtablecell:nth-of-type(2) {
+	padding-left: 16px;
+}
+.adtablerow:nth-of-type(2) .adtablecell {
+	padding-top: 27px;
+}
+
 
 
 
