@@ -38,8 +38,10 @@ function makedata(){
 		var spacermedium = div("spacermedium");
 		var spacersmall = div("spacersmall");
 		contentlist.webdesign = ""
+			
+			+ img("images/page_images/web_email_puzzle.jpg")
+			+ spacer
 			+ div("containImage", img("images/page_images/marketing_email.jpg", "dropshadow", "width:69%"))
-			+ caption("Marketing Email")
 			+ spacer
 			+ img("images/page_images/socialmedia_amazon.jpg")
 			+ caption("Social Media Featured Image")
