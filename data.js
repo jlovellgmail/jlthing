@@ -144,7 +144,9 @@ function makedata(){
 			+ text("Art Direction. I took finalized headline and body copy, and designed and executed all visual aspects including photo selection, visual treatment and typography. I worked closely with the copywriter and creative director to ensure the ads stayed on-strategy and spoke in the intended voice.", " ", "margin-top:2px;")
 
 			+ spacersmall
-			+ "<span style='font-weight:bold'>Copywriter:</span> <a target='_blank' href='https://www.jessbrophy.com/#/health-warrior/'>Jessica Brophy</a>"
+			
+			//+ "<span style='font-weight:bold'>Copywriter:</span> <a target='_blank' href='https://www.jessbrophy.com/#/health-warrior/'>Jessica Brophy</a>"
+			+ "<span style='font-weight:bold'>Copywriter:</span> Jessica Brophy"
 
 			+ spacer
 			
